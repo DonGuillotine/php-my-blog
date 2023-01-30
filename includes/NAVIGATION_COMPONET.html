@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- NAVIGATION WIDGET -->
+<nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">
+
+
+    <!-- MENU -->
+    <ul class="menu small">
+        <!-- MENU ITEM -->
+        <li class="menu-item">
+            <!-- MENU ITEM LINK -->
+            <a class="menu-item-link text-tooltip-tfr" href="index.php" data-title="Home">
+                <!-- MENU ITEM LINK ICON -->
+                <svg class="menu-item-link-icon icon-newsfeed">
+                    <use xlink:href="#svg-newsfeed"></use>
+                </svg>
+                <!-- /MENU ITEM LINK ICON -->
+            </a>
+            <!-- /MENU ITEM LINK -->
+        </li>
+        <!-- /MENU ITEM -->
+
+        <!-- MENU ITEM -->
+        <li class="menu-item">
+            <!-- MENU ITEM LINK -->
+            <a class="menu-item-link text-tooltip-tfr" href="admin/index.php" data-title="Admin">
+                <!-- MENU ITEM LINK ICON -->
+                <svg class="menu-item-link-icon icon-overview">
+                    <use xlink:href="#svg-overview"></use>
+                </svg>
+                <!-- /MENU ITEM LINK ICON -->
+            </a>
+            <!-- /MENU ITEM LINK -->
+        </li>
+        <!-- /MENU ITEM -->
+
+        <!-- MENU ITEM -->
+        <li class="menu-item">
+            <!-- MENU ITEM LINK -->
+            <a class="menu-item-link text-tooltip-tfr" href="registration.php" data-title="Registration">
+                <!-- MENU ITEM LINK ICON -->
+                <svg class="menu-item-link-icon icon-group">
+                    <use xlink:href="#svg-group"></use>
+                </svg>
+                <!-- /MENU ITEM LINK ICON -->
+            </a>
+            <!-- /MENU ITEM LINK -->
+        </li>
+        <!-- /MENU ITEM -->
+
+        <!-- MENU ITEM -->
+
+        <?php
+                if(isset($_SESSION['user_role'])){
+                    if(isset($_GET['p_id'])){
+                        $the_actual_id = $_GET['p_id'];
+                        echo "<li class='menu-item'><a class='menu-item-link text-tooltip-tfr' href='admin/posts.php?source=edit_post&p_id={$the_actual_id}' data-title='Edit Post'><svg class='menu-item-link-icon icon-members'><use xlink:href='#svg-members'></use></svg></a></li>";
+        }
+        }
+        ?>
+        <!-- /MENU ITEM -->
+
+    </ul>
+    <!-- /MENU -->
+</nav>
+<!-- /NAVIGATION WIDGET -->
+</body>
+</html>
+
+
+
+
