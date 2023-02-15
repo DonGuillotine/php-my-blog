@@ -12,6 +12,7 @@ This is a blog built using PHP as the programming language. It provides a platfo
 - Create, edit, and delete posts
 - View posts by other users
 - Search for posts by keywords
+- Post Management by admin
 
 ## Requirements
 - PHP 7.4 or higher
